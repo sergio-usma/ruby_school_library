@@ -4,7 +4,7 @@ require './trimmer_decorator'
 
 class Person < Nameable
   attr_reader :id
-  attr_accessor :name, :age, :parent_permission
+  attr_accessor :name, :age, :rentals
 
   def initialize(age, name: 'Unknown', parent_permission: true)
     super()
@@ -12,6 +12,7 @@ class Person < Nameable
     @name = name
     @age = age.to_i
     @parent_permission = parent_permission
+    @rentals = []
   end
 
   def correct_name
@@ -29,12 +30,16 @@ class Person < Nameable
   def can_use_services?
     of_age? || @parent_permission
   end
+
+  def add_rental(book, date)
+    Rental.new(date, book, self)
+  end
 end
 
-person1 = Person.new(15, name: 'Sergio', parent_permission: false)
+person1 = Person.new(15, name: 'Juan', parent_permission: false)
 puts person1.can_use_services?
 
-person2 = Person.new(48, name: 'Andres')
+person2 = Person.new(48, name: 'David')
 puts person2.can_use_services?
 
 puts person1.correct_name
