@@ -7,6 +7,43 @@ def title
   puts
 end
 
+def main
+  title
+  @app.options
+
+  loop do
+    input = gets.chomp
+    case input
+    when '1'
+      @app.list_books
+    when '2'
+      @app.list_people
+    when '3'
+      create_person
+    when '4'
+      create_book
+    when '5'
+      create_rental
+    when '6'
+      @app.list_rentals
+    else
+      exit_program
+    end
+  end
+end
+
+def create_person
+  puts 'To create a Student (Enter 1), to create a Teacher (Enter 2):'
+  input = gets.chomp
+  if input == '1'
+    create_student
+  elsif input == '2'
+    create_teacher
+  else
+    puts 'Invalid input'
+  end
+end
+
 def create_student
   print 'Enter your name: '
   name = gets.chomp
@@ -58,46 +95,9 @@ def create_rental
   @app.create_rental(date, book_title, person_name)
 end
 
-def main
-  title
-  @app.options
-
-  loop do
-    input = gets.chomp
-    case input
-    when '1'
-      @app.list_books
-
-    when '2'
-      @app.list_people
-    when '3'
-      puts 'To create a Student (Enter 1), to create a Teacher (Enter 2):'
-      input = gets.chomp
-      if input == '1'
-        create_student
-      elsif input == '2'
-        create_teacher
-      else
-        puts 'Invalid input'
-      end
-
-    when '4'
-      create_book
-
-    when '5'
-      create_rental
-
-    when '6'
-      @app.list_rentals
-
-    when '7'
-      puts 'Goodbye!!!'
-      exit
-
-    else
-      puts 'Invalid input'
-    end
-  end
+def exit_program
+  puts 'Goodbye!!!'
+  exit
 end
 
 main
