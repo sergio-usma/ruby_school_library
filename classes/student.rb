@@ -1,16 +1,16 @@
-require './person'
+require_relative 'person'
 
 # Creating class Student
 class Student < Person
-  attr_reader :classroom, :parent_permission
+  attr_accessor :classroom, :parent_permission
 
   def initialize(age, classroom, name: 'Unknown', parent_permission: true)
-    super(name, age, parent_permission)
-    @classromm = classroom
+    super(age, name: name, parent_permission: parent_permission)
+    @classroom = classroom
     classroom.add_student(self)
   end
 
-  def classroom=(classroom)
+  def class_room=(classroom)
     @classroom = classroom
     classroom.students.push(self) unless classroom.students.include?(self)
   end
