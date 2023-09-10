@@ -60,9 +60,7 @@ class App
       go_back
     else
       puts 'This is the list of books available:'
-      @book.each_with_index do |list, i|
-        puts "#{i}) Title: #{list.title}, Author: #{list.author}"
-      end
+      @books.each_with_index { |list, i| puts "#{i}) Title: #{list.title}, Author: #{list.author}" }
     end
     go_back
   end
