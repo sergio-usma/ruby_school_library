@@ -102,6 +102,12 @@ Run the application:
 - Twitter: [@VonUsma](https://twitter.com/vonusma)
 - LinkedIn: [Sergio Andres Usma](https://www.linkedin.com/in/sergiousma/)
 
+👤 **Diego Vidal**
+
+- GitHub: [@Diegogagan2587](https://github.com/Diegogagan2587)
+- Twitter: [@dieg02587](https://twitter.com/dieg02587)
+- LinkedIn: [diego-vidal-lopez](https://www.linkedin.com/in/diego-vidal-lopez/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
