@@ -18,7 +18,7 @@ class App
 
     case input
     when 1..6 then menu_nav(input)
-    when 7 then puts 'Goodbye!' && exit
+    when 7 then exit
     else
       puts 'Invalid input! Select a number from 1 to 7'
     end
@@ -51,7 +51,7 @@ class App
   end
 
   def go_back
-    print 'Press Enter to return to the menu'
+    puts ['Press Enter to return to the menu', '']
     gets.chomp
     run
   end
@@ -160,9 +160,7 @@ class App
         puts 'No rentals matched with your ID'
       else
         puts "The rentals for ID #{person_id}:"
-        get_rental.each do |rental|
-          puts "- On #{rental.date}, #{rental.person.name} rented #{rental.book.title}"
-        end
+        get_rental.each { |rental| puts "- On #{rental.date}, #{rental.person.name} rented #{rental.book.title}" }
       end
     end
     go_back
