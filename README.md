@@ -47,6 +47,10 @@
 - Add new students or teachers.
 - Add new books.
 - Save records of who borrowed a given book and when.
+- List all the books in the library.
+- List all the students and teachers.
+- Search a rental record by user ID.
+- Exit the program.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -113,14 +117,8 @@ Run the application:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-- [ ] **Add a book:** The user can add a book to the library.
 - [ ] **Remove a book:** The user can remove a book from the library.
 - [ ] **Search a book:** The user can search a book in the library.
-- [ ] **List all books:** The user can list all the books in the library.
-- [ ] **Save books:** The user can save the books in a file.
-- [ ] **Load books:** The user can load the books from a file.
-- [ ] **Exit:** The user can exit the program.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
