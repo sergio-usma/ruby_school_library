@@ -101,7 +101,7 @@ class App
     parent_permission = gets.chomp
     student = Student.new(age, parent_permission, name)
     @people << student
-    puts "#{student.name} has been created successfully"
+    puts "#{student.name} has been created"
     go_back
   end
 
@@ -114,7 +114,7 @@ class App
     specialization = gets.chomp
     teacher = Teacher.new(age, specialization, name)
     @people << teacher
-    puts "#{teacher.name} has been created successfully"
+    puts "#{teacher.name} has been created"
     go_back
   end
 
