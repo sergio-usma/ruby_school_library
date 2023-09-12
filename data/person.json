@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "type": "Student",
+    "name": "Sergio",
+    "age": 25,
+    "classroom": "Web Development"
+  },
+  {
+    "id": 2,
+    "type": "Teacher",
+    "name": "Javier",
+    "age": 35,
+    "Specialization": "Web Development"
+  }
+]
