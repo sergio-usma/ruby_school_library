@@ -1,14 +1,16 @@
-require_relative 'classes/student'
 require_relative 'classes/book'
+require_relative 'store/read'
 require_relative 'classes/rental'
+require_relative 'classes/student'
 require_relative 'classes/teacher'
+require_relative 'store/write'
 
 class App
   attr_accessor :book, :people, :rentals
 
   def initialize
-    @people = []
-    @books = []
+    @people = Read.new.read_person
+    @books = Read.new.read_books
     @rentals = []
   end
 
