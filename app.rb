@@ -18,21 +18,23 @@ class App
 
     case input
     when 1..6 then menu_nav(input)
-    when 7 then puts 'Goodbye!' && exit
+    when 7 then exit
     else
       puts 'Invalid input! Select a number from 1 to 7'
     end
   end
 
   def menu_options
-    puts 'Welcome! Please enter the number of the option:'
-    puts '1 - List all books'
-    puts '2 - List all people'
-    puts '3 - Create a person'
-    puts '4 - Create a book'
-    puts '5 - Create a rental'
-    puts '6 - List all rentals for a given person id'
-    puts '7 - Exit'
+    puts [
+      'Welcome! Please enter the number of the option:',
+      '1 - List all books',
+      '2 - List all people',
+      '3 - Create a person',
+      '4 - Create a book',
+      '5 - Create a rental',
+      '6 - List all rentals for a given person id',
+      '7 - Exit'
+    ]
   end
 
   def menu_nav(input)
@@ -49,7 +51,7 @@ class App
   end
 
   def go_back
-    print 'Press Enter to return to the menu'
+    puts ['Press Enter to return to the menu', '']
     gets.chomp
     run
   end
@@ -99,7 +101,7 @@ class App
     parent_permission = gets.chomp
     student = Student.new(age, parent_permission, name)
     @people << student
-    puts "#{student.name} has been created successfully"
+    puts "#{student.name} has been created"
     go_back
   end
 
@@ -112,7 +114,7 @@ class App
     specialization = gets.chomp
     teacher = Teacher.new(age, specialization, name)
     @people << teacher
-    puts "#{teacher.name} has been created successfully"
+    puts "#{teacher.name} has been created"
     go_back
   end
 
@@ -158,9 +160,7 @@ class App
         puts 'No rentals matched with your ID'
       else
         puts "The rentals for ID #{person_id}:"
-        get_rental.each do |rental|
-          puts "- On #{rental.date}, #{rental.person.name} rented #{rental.book.title}"
-        end
+        get_rental.each { |rental| puts "- On #{rental.date}, #{rental.person.name} rented #{rental.book.title}" }
       end
     end
     go_back
