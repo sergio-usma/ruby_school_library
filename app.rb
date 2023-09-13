@@ -116,7 +116,7 @@ class App
     age = gets.chomp.to_i
     print 'Enter your specialization: '
     specialization = gets.chomp
-    teacher = Teacher.new(age, specialization, name)
+    teacher = Teacher.new(name, age, specialization)
     @people << teacher
     puts "#{teacher.name} has been created"
     go_back
