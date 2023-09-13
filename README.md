@@ -4,37 +4,37 @@
 
 </div>
 
-<a name="readme-top"></a>
+<a id="readme-top"></a>
 
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Vet Clinic ](#-vet-clinic-)
-    - [🛠 Built With ](#-built-with-)
-        - [Tech Stack ](#tech-stack-)
-        - [Key Features ](#key-features-)
-    - [💻 Getting Started ](#-getting-started-)
+- [📖 School Library ](#about-project)
+    - [🛠 Built With ](#built-with)
+        - [Tech Stack ](#tech-stack)
+        - [Key Features ](#key-features)
+    - [💻 Getting Started ](#getting-started)
         - [Prerequisites](#prerequisites)
         - [Setup](#setup)
-    - [👥 Authors ](#-authors-)
-    - [🔭 Future Features ](#-future-features-)
-    - [🤝 Contributing ](#-contributing-)
-    - [⭐️ Show your support ](#️-show-your-support-)
-    - [🙏 Acknowledgments ](#-acknowledgments-)
-    - [❓ FAQ ](#-faq-)
-    - [📝 License ](#-license-)
+    - [👥 Authors ](#authors)
+    - [🔭 Future Features ](#future-features)
+    - [🤝 Contributing ](#contributing)
+    - [⭐️ Show your support ](#️show-support)
+    - [🙏 Acknowledgments ](#acknowledgements)
+    - [❓ FAQ ](#faq)
+    - [📝 License ](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 OOP school library <a name="about-project"></a>
+# 📖 OOP school library <a id="about-project"></a>
 
 **OOP school library** is a project that creates a tool to record the books in a library. It allows to add, remove, search and list books. It also allows to save the books in a file and load them from a file. The project is built with Ruby.
 
-## 🛠 Built With <a name="built-with"></a>
+## 🛠 Built With <a id = "built-with" ></a>
 
-### Tech Stack <a name="tech-stack"></a>
+### Tech Stack <a id="tech-stack"></a>
 
   <ul>
   <li>Ruby</li>
@@ -42,7 +42,7 @@
 
 <!-- Features -->
 
-### Key Features <a name="key-features"></a>
+### Key Features <a id="key-features"></a>
 
 - Add new students or teachers.
 - Add new books.
@@ -56,7 +56,7 @@
 
 <!-- GETTING STARTED -->
 
-## 💻 Getting Started <a name="getting-started"></a>
+## 💻 Getting Started <a id="getting-started"></a>
 
 If you would like to get a local copy up and running, please follow these steps.
 
@@ -97,7 +97,7 @@ Run the application:
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Authors <a id="authors"></a>
 
 
 👤 **Sergio Usma**
@@ -116,7 +116,7 @@ Run the application:
 
 <!-- FUTURE FEATURES -->
 
-## 🔭 Future Features <a name="future-features"></a>
+## 🔭 Future Features <a id="future-features"></a>
 - [ ] **Remove a book:** The user can remove a book from the library.
 - [ ] **Search a book:** The user can search a book in the library.
 
@@ -124,7 +124,7 @@ Run the application:
 
 <!-- CONTRIBUTING -->
 
-## 🤝 Contributing <a name="contributing"></a>
+## 🤝 Contributing <a id="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
@@ -134,7 +134,7 @@ Feel free to check the [issues page](https://github.com/sergio-usma/ruby_school_
 
 <!-- SUPPORT -->
 
-## ⭐️ Show your support <a name="support"></a>
+## ⭐️ Show your support <a id="show-support"></a>
 
 If you like this project, please consider supporting us! Your support helps us to continue developing and improving our project for everyone to enjoy. Whether it's a small donation, sharing the project with your friends, or contributing your skills and expertise, every little bit makes a huge difference. With your support, we can create something truly amazing together. Thank you for being a part of our community and helping us to make a difference!
 
@@ -142,7 +142,7 @@ If you like this project, please consider supporting us! Your support helps us t
 
 <!-- ACKNOWLEDGEMENTS -->
 
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
+## 🙏 Acknowledgments <a id="acknowledgements"></a>
 
 I want to thank Microverse for this amazing opportunity to learn with them and for the support they give me to make this possible.
 
@@ -150,7 +150,7 @@ I want to thank Microverse for this amazing opportunity to learn with them and f
 
 <!-- FAQ (optional) -->
 
-## ❓ FAQ <a name="faq"></a>
+## ❓ FAQ <a id="faq"></a>
 
 - **How do I set up the project?**
 
@@ -169,7 +169,7 @@ I want to thank Microverse for this amazing opportunity to learn with them and f
 
 <!-- LICENSE -->
 
-## 📝 License <a name="license"></a>
+## 📝 License <a id="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
 
