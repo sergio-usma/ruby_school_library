@@ -20,7 +20,7 @@ class App
 
     case input
     when 1..6 then menu_nav(input)
-    when 7 then exit
+    when 7 then Write.new(@people, @books, @rentals).to_store && exit
     else
       puts 'Invalid input! Select a number from 1 to 7'
     end
