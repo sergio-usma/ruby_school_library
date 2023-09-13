@@ -37,7 +37,9 @@
 ### Tech Stack <a id="tech-stack"></a>
 
   <ul>
-  <li>Ruby</li>
+    <li>
+      <li><a href="https://www.ruby-lang.org/">Ruby</a></li>
+   </li>
   </ul>
 
 <!-- Features -->
