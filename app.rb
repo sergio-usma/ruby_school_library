@@ -20,7 +20,11 @@ class App
 
     case input
     when 1..6 then menu_nav(input)
-    when 7 then Write.new(@people, @books, @rentals).to_store && exit
+    when 7
+      Write.new.write_person(@people)
+      Write.new.write_books(@books)
+      Write.new.write_rentals(@rentals)
+      exit
     else
       puts 'Invalid input! Select a number from 1 to 7'
     end
@@ -76,7 +80,7 @@ class App
     else
       puts 'This is the list of all people:'
       @people.each_with_index do |list, i|
-        puts "#{i}) [#{list.class}] - Name: #{list.name}, ID: #{list.id} Age: #{list.age}"
+        puts "#{i}) [#{list.class}] - Name: #{list.name}, ID: #{list.id}, Age: #{list.age}"
       end
     end
     go_back
