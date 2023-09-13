@@ -9,12 +9,12 @@ class Write
     FileUtils.touch('./data/rentals.json') unless File.exist?('./data/rentals.json') && file_name == 'rentals'
   end
 
-  #   def to_store
-  #     write_books
-  #     write_person
-  #     write_rentals
-  #     puts 'All Records were saved !'
-  #   end
+     def store(people,books,rentals)
+       write_books(books)
+       write_person(people)
+       write_rentals(rentals)
+       puts 'All Records were saved !'
+     end
 
   def write_books(books)
     puts 'Saving books into storage ...'
