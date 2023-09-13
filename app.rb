@@ -11,7 +11,7 @@ class App
   def initialize
     @people = Read.new.read_person
     @books = Read.new.read_books
-    @rentals = []
+    @rentals = Read.new.read_rentals
   end
 
   def run
@@ -99,9 +99,11 @@ class App
     name = gets.chomp
     print 'Enter your age: '
     age = gets.chomp.to_i
+    print 'Enter your classroom: '
+    classroom = gets.chomp
     print 'Do you have permission from your parents? [Y/N]: '
-    parent_permission = gets.chomp
-    student = Student.new(age, parent_permission, name)
+    parent_permission = gets.chomp.downcase == 'y'
+    student = Student.new(name, age, classroom, parent_permission: parent_permission)
     @people << student
     puts "#{student.name} has been created"
     go_back
