@@ -21,9 +21,11 @@ class Read
     people_data.each do |person|
       if person['type'] == 'Teacher'
         teacher = Teacher.new(person['age'], person['specialization'], person['name'])
+        teacher.id = person['id']
         people << teacher
       else
         student = Student.new(person['classroom'], person['age'], person['name'])
+        student.id = person['id']
         people << student
       end
     end
@@ -40,10 +42,12 @@ class Read
     rental_data.each do |rent|
       if rent['type'] == 'Teacher'
         teacher = Teacher.new(rent['age'], rent['specialization'], rent['name'])
+        teacher.id = rent['id']
         book = Book.new(rent['title'], rent['author'])
         rental = Rental.new(rent['date'], book, teacher)
       else
         student = Student.new(rent['classroom'], rent['age'], rent['name'])
+        student.id = rent['id']
         book = Book.new(rent['title'], rent['author'])
         rental = Rental.new(rent['date'], book, student)
       end
