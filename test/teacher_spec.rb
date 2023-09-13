@@ -15,9 +15,9 @@ describe Teacher do
     expect(spec).to eql('Math')
   end
 
-  it 'can_use_services? should always return false' do
+  it 'can_use_services? should always return True' do
     can_use = @teacher.can_use_services?
 
-    expect(can_use).to eql(false)
+    expect(can_use).to eql(true)
   end
 end
