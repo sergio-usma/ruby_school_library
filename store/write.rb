@@ -11,53 +11,49 @@ class Write
     write_books
     write_person
     write_rentals
-    puts "All Records were saved !"
+    puts 'All Records were saved !'
   end
 
   def write_books
-    puts "Saving books into storage ..."
+    puts 'Saving books into storage ...'
     book_data = []
 
-    @books.each { | book |
+    @books.each do |book|
       book_data.push({
-        'title' => book.title,
-        'author' => book.author
-      })
-    }
+                       'title' => book.title,
+                       'author' => book.author
+                     })
+    end
 
     json_data = JSON.generate(book_data)
-    store = File.open('./data/books.json', "w") { | file |
-      file.write json_data
-    }
+    File.write('./data/books.json', json_data)
   end
 
   def write_person
-    puts "Saving people into storage ..."
+    puts 'Saving people into storage ...'
     people_data = []
-    @people.each { | person |
+    @people.each do |person|
       person_hash = {
         'id' => person.id,
         'type' => person.class,
         'name' => person.name,
-        'age' => person.age,
+        'age' => person.age
       }
-      if person.class == Student
-          person_hash['classroom'] = person.classroom
+      if person.instance_of?(Student)
+        person_hash['classroom'] = person.classroom
       else
         person_hash['specialization'] = person.specialization
       end
       people_data.push(person_hash)
-    }
+    end
     json_data = JSON.generate(people_data)
-    store = File.open('./data/person.json', 'w') { | file |
-      file.write json_data
-    }
+    File.write('./data/person.json', json_data)
   end
 
   def write_rentals
-    puts "Saving rentals into storage ..."
+    puts 'Saving rentals into storage ...'
     rentals_data = []
-    @rentals.each { | rental | 
+    @rentals.each do |rental|
       rental_hash = {
         'date' => rental.date,
         'title' => rental.book.title,
@@ -65,19 +61,16 @@ class Write
         'id' => rental.person.id,
         'name' => rental.person.name,
         'age' => rental.person.age,
-        'type' => rental.person.class,
+        'type' => rental.person.class
       }
-      if rental.person.class == Student
+      if rental.person.instance_of?(Student)
         rental_hash['classroom'] = rental.person.classroom
       else
         rental_hash['specialization'] = rental.person.specialization
       end
       rentals_data.push(rental_hash)
-    }
+    end
     json_data = JSON.generate(rentals_data)
-    store = File.open('./data/rentals.json', 'w') { | file |
-      file.write json_data
-    }
+    File.write('./data/rentals.json', json_data)
   end
-
 end
