@@ -20,11 +20,11 @@ class Read
     people_data = JSON.parse(store.read)
     people_data.each do |person|
       if person['type'] == 'Teacher'
-        teacher = Teacher.new(person['age'], person['specialization'], person['name'])
+        teacher = Teacher.new(person['name'], person['age'], person['specialization'])
         teacher.id = person['id']
         people << teacher
       else
-        student = Student.new(person['classroom'], person['age'], person['name'])
+        student = Student.new(person['name'], person['age'], person['classroom'])
         student.id = person['id']
         people << student
       end
@@ -41,12 +41,12 @@ class Read
     rental_data = JSON.parse(store.read)
     rental_data.each do |rent|
       if rent['type'] == 'Teacher'
-        teacher = Teacher.new(rent['age'], rent['specialization'], rent['name'])
+        teacher = Teacher.new(rent['name'], rent['age'], rent['specialization'])
         teacher.id = rent['id']
         book = Book.new(rent['title'], rent['author'])
         rental = Rental.new(rent['date'], book, teacher)
       else
-        student = Student.new(rent['classroom'], rent['age'], rent['name'])
+        student = Student.new(rent['name'], rent['age'], rent['classroom'])
         student.id = rent['id']
         book = Book.new(rent['title'], rent['author'])
         rental = Rental.new(rent['date'], book, student)
