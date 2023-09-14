@@ -3,10 +3,10 @@ require_relative '../classes/book'
 require_relative '../classes/person'
 
 describe Rental do
-  before :each do 
+  before :each do
     @date = '2015/08/25'
     @book = Book.new('Unknow Book', 'Unkow author')
-    @person = Person.new('Bruno',25)
+    @person = Person.new('Bruno', 25)
     @rental = Rental.new(@date, @book, @person)
   end
 

@@ -2,7 +2,7 @@ require_relative '../classes/classroom'
 
 describe Classroom do
   before :each do
-    @classroom = Classroom.new("Grade 7")
+    @classroom = Classroom.new('Grade 7')
   end
   it 'Should return Grade 7' do
     actual = @classroom.label
@@ -10,13 +10,13 @@ describe Classroom do
   end
 
   it 'Should Initialize students as an empty array' do
-    actual = @classroom.students 
+    actual = @classroom.students
     expect(actual).to eql([])
   end
 
   it 'Should add a new student' do
     @student = double('student')
-    allow(@student).to receive(:name){'Bruno'}
+    allow(@student).to receive(:name) { 'Bruno' }
     allow(@student).to receive(:classroom=)
 
     @classroom.add_student(@student)
